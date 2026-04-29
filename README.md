@@ -70,10 +70,10 @@ export default defineConfig([
     },
   },
 ])
-```
 
 
-mudular-structure-v2/
+
+```mudular-structure-v2/
 ├── 📄 package.json          # إعدادات المشروع والمكتبات
 ├── 📄 package-lock.json      
 ├── 📄 bun.lock               # ملف قفل الإصدارات الخاص بـ Bun
