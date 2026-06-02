@@ -1,5 +1,5 @@
 {
-  "name": "mudular-structure-v2",
+  "name": "fsd-architecture-starter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -18,19 +18,9 @@
     }
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.4.0",
     "@tailwindcss/vite": "^4.2.1",
-    "@tanstack/react-query": "^5.90.21",
-    "axios": "^1.15.0",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.575.0",
-    "radix-ui": "^1.4.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-hook-form": "^7.72.1",
-    "react-router": "^7.13.1",
-    "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {

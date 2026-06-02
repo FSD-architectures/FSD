@@ -7,22 +7,22 @@ on:
       - master
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
   create-pr:
-    name: Create PR to main
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create Pull Request
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: main
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_title: "chore: merge ${{ github.ref_name }} into main"
-          pr_body: |
-            Auto-created PR from `${{ github.ref_name }}` to `main`.
+      - uses: actions/checkout@v4
 
-            Triggered by push to `${{ github.ref_name }}`.
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: ${{ github.ref_name }}
+          title: "chore: merge ${{ github.ref_name }} into main"
+          body: |
+            Auto-created PR from `${{ github.ref_name }}` to `main`.

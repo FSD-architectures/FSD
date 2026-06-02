@@ -1,0 +1,21 @@
+name: PR Labeler
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  label:
+    name: Add labels by changed files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Label PR
+        uses: actions/labeler@v6
