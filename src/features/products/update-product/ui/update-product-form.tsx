@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import type { Product } from "@/entities/products";
 import {
     updateProductSchema,
+    type UpdateProductFormInput,
     type UpdateProductFormValues,
 } from "../model/update-product.schema";
 import { useUpdateProduct } from "../model/use-update-product";
@@ -14,7 +15,7 @@ type UpdateProductFormProps = {
 export const UpdateProductForm = ({ product }: UpdateProductFormProps) => {
     const { mutate, isPending } = useUpdateProduct();
 
-    const form = useForm<UpdateProductFormValues>({
+    const form = useForm<UpdateProductFormInput, unknown, UpdateProductFormValues>({
         resolver: zodResolver(updateProductSchema),
         defaultValues: {
             title: product.title,

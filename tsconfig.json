@@ -1,6 +1,4 @@
 {
-  "strict": true,
-  "noUncheckedIndexedAccess": true,
   "files": [],
   "references": [
     {
@@ -11,6 +9,7 @@
     }
   ],
   "compilerOptions": {
+    "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [

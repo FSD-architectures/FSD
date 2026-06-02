@@ -8,4 +8,5 @@ export const createProductSchema = z.object({
   stock: z.coerce.number().min(0, "Stock cannot be negative"),
 });
 
+export type CreateProductFormInput = z.input<typeof createProductSchema>;
 export type CreateProductFormValues = z.infer<typeof createProductSchema>;

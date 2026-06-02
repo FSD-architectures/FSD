@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import { UpdateCategoryForm } from "@/features/categories/update-category/ui/update-category-form";
 
 export const UpdateCategoryPage = () => {
     const { categoryId } = useParams();
@@ -8,7 +7,9 @@ export const UpdateCategoryPage = () => {
     return (
         <div className="mx-auto max-w-2xl">
             <h1 className="mb-4 text-2xl font-bold">Update Category</h1>
-            <UpdateCategoryForm categoryId={categoryId} />
+            <p className="text-muted-foreground">
+                Update category feature is not implemented yet for category {categoryId}.
+            </p>
         </div>
     );
 };

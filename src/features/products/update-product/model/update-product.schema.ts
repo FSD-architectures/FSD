@@ -8,4 +8,5 @@ export const updateProductSchema = z.object({
   stock: z.coerce.number().min(0, "Stock cannot be negative"),
 });
 
+export type UpdateProductFormInput = z.input<typeof updateProductSchema>;
 export type UpdateProductFormValues = z.infer<typeof updateProductSchema>;
