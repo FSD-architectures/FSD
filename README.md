@@ -2,7 +2,7 @@
 
 A lightweight React, Vite, and TypeScript starter organized with Feature-Sliced Design.
 
-## Quick Start
+## Quick Start with fsd
 
 ```bash
 npm install
